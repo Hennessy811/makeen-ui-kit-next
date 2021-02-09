@@ -1,14 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
-    <g fill="none" fill-rule="evenodd">
-        <g>
-            <g>
-                <g>
-                    <g>
-                        <path d="M0 0H40V40H0z" transform="translate(-1816 -359) translate(1656 279) translate(0 80) translate(160)"/>
-                        <path fill="#192038" d="M5 33.333V6.667h-.833v26.666H5zm5 0V6.667h-.833v26.666H10zm4.167 0V6.667h-.834v26.666h.834zm6.666 0V6.667H20v26.666h.833zm4.167 0V6.667h-.833v26.666H25zm5.833 0V6.667H30v26.666h.833zm5 0V6.667H35v26.666h.833zm-13.333 0V6.667h-.833v26.666h.833zm5.833 0V6.667H27.5v26.666h.833zm4.167 0V6.667h-.833v26.666h.833zm-25.833 0V6.667h-.834v26.666h.834zm5.833 0V6.667h-.833v26.666h.833zm5 0V6.667h-.833v26.666h.833zm1.667 0V6.667h-.834v26.666h.834z" transform="translate(-1816 -359) translate(1656 279) translate(0 80) translate(160)"/>
-                    </g>
-                </g>
-            </g>
-        </g>
-    </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><g fill="none" fill-rule="evenodd"><g><g><g><g><path d="M0 0H40V40H0z" transform="translate(-1816 -359) translate(1656 279) translate(0 80) translate(160)"/><path fill="#192038" d="M5 33.333V6.667h-.833v26.666H5zm5 0V6.667h-.833v26.666H10zm4.167 0V6.667h-.834v26.666h.834zm6.666 0V6.667H20v26.666h.833zm4.167 0V6.667h-.833v26.666H25zm5.833 0V6.667H30v26.666h.833zm5 0V6.667H35v26.666h.833zm-13.333 0V6.667h-.833v26.666h.833zm5.833 0V6.667H27.5v26.666h.833zm4.167 0V6.667h-.833v26.666h.833zm-25.833 0V6.667h-.834v26.666h.834zm5.833 0V6.667h-.833v26.666h.833zm5 0V6.667h-.833v26.666h.833zm1.667 0V6.667h-.834v26.666h.834z" transform="translate(-1816 -359) translate(1656 279) translate(0 80) translate(160)"/></g></g></g></g></g></svg>
