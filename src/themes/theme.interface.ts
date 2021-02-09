@@ -314,7 +314,19 @@ export interface IExtendedPaletteOptions extends Palette {
   formFooterTextColor: string;
 }
 
-export interface IExtendedTheme extends Theme {
+declare module "@material-ui/core/styles/createMuiTheme" {
+  interface Theme {
+    extendedPalette: IExtendedPaletteOptions;
+    sizes: ISizes;
+  }
+  // allow configuration using `createMuiTheme`
+  interface ThemeOptions {
+    extendedPalette: Partial<IExtendedPaletteOptions>;
+    sizes: ISizes;
+  }
+}
+
+export interface ExtendedTheme extends Theme {
   palette: IExtendedPaletteOptions;
   sizes: ISizes;
 }

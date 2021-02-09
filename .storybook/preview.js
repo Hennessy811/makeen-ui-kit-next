@@ -1,7 +1,6 @@
 import React from "react";
 import CssBaseline from "@material-ui/core/CssBaseline";
-
-import dark from "themes/dark";
+import { ThemeProvider } from "styled-components";
 import { MuiThemeProvider } from "@material-ui/core/styles";
 import { StylesProvider } from "@material-ui/styles";
 import { Box, Card } from "@material-ui/core";
@@ -11,7 +10,6 @@ import Retrowave from "themes/retrowave";
 import Default from "themes/default";
 
 const themes = { Default, Dark, Retrowave };
-const themeNames = Object.keys(themes);
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -19,14 +17,16 @@ export const parameters = {
 
 export const decorators = [
   (storyFn, context) => {
-    console.log({ context });
+    const selectedTheme = themes[context.globals.theme];
     return (
       <StylesProvider injectFirst>
         <CssBaseline />
-        <MuiThemeProvider theme={themes[context.globals.theme]}>
-          <Card style={{ borderRadius: 0 }}>
-            <Box p={2}>{storyFn()}</Box>
-          </Card>
+        <MuiThemeProvider theme={selectedTheme}>
+          <ThemeProvider theme={selectedTheme}>
+            <Card style={{ borderRadius: 0 }}>
+              <Box p={2}>{storyFn()}</Box>
+            </Card>
+          </ThemeProvider>
         </MuiThemeProvider>
       </StylesProvider>
     );
@@ -39,7 +39,11 @@ export const globalTypes = {
     defaultValue: "Default",
     toolbar: {
       icon: "circlehollow",
-      items: ["Default", "Dark", "Retrowave"],
+      items: [
+        { value: "Default", title: "🌆 Default" },
+        { value: "Dark", title: "🌃 Dark" },
+        { value: "Retrowave", title: "👾 Retrowave" },
+      ],
     },
   },
 };

@@ -141,3 +141,5 @@ export const sizes: ISizes = {
     },
   },
 };
+
+export type ButtonSize = keyof typeof sizes.button;

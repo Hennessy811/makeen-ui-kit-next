@@ -5,9 +5,13 @@ import indigo from "@material-ui/core/colors/indigo";
 import purple from "@material-ui/core/colors/purple";
 import amber from "@material-ui/core/colors/amber";
 import deepOrange from "@material-ui/core/colors/deepOrange";
+import palette from "./default/palette";
+import { sizes } from "./default/sizes";
 
 export default createMuiTheme({
-  palette: {
+  palette: {},
+  extendedPalette: {
+    ...palette,
     primary: indigo,
     secondary: purple,
     error: deepOrange,
@@ -20,4 +24,5 @@ export default createMuiTheme({
       disabled: lightBlue[100],
     },
   },
+  sizes,
 });

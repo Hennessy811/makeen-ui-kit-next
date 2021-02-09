@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="10px" height="2px" viewBox="0 0 10 2" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icon/Minus</title>
+    <g id="💙-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons-Copy" transform="translate(-783.000000, -291.000000)">
+            <g id="Icon/Minus" transform="translate(776.000000, 280.000000)">
+                <rect id="Base" x="0" y="0" width="24" height="24"></rect>
+                <rect id="Icon" fill="#151A30" x="7.5" y="11.25" width="9" height="1.5" rx="0.75"></rect>
+            </g>
+        </g>
+    </g>
+</svg>
