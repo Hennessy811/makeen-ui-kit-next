@@ -1,9 +1,10 @@
-import appTheme from '../default';
 import { red } from '@material-ui/core/colors';
 import { createMuiTheme } from '@material-ui/core/styles';
+import { Theme } from '@material-ui/core';
+import appTheme from '../default';
 import { IExtendedPaletteOptions } from '../theme.interface';
 import * as colors from './colors';
-import { Theme } from '@material-ui/core';
+
 const { palette: defaultPalette } = createMuiTheme();
 
 interface DoubleExtendedPalette extends IExtendedPaletteOptions {

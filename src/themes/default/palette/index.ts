@@ -2,7 +2,7 @@ import { createMuiTheme } from '@material-ui/core';
 import { IExtendedPaletteOptions } from '../../theme.interface';
 import * as colors from '../../colors';
 import components from './components';
-import { generalPalette } from './general';
+import generalPalette from './general';
 
 const { palette: defaultPalette } = createMuiTheme();
 

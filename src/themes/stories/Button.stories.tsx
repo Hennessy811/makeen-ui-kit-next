@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 // also exported from '@storybook/react' if you can deal with breaking changes in 6.1
+// eslint-disable-next-line import/no-unresolved
 import { Story, Meta } from '@storybook/react/types-6-0';
 import { Button as MuiButton, ButtonProps as MuiButtonProps } from '@material-ui/core';
 
@@ -12,6 +13,7 @@ interface ButtonProps extends MuiButtonProps {}
  * Refer to Material UI button to get full set of features
  *
  */
+
 const Button: FC<ButtonProps> = props => <MuiButton {...props} />;
 
 export default {

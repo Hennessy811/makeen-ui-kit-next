@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-syntax */
 import React, { FC } from 'react';
 
 import { SvgIcon } from '@material-ui/core';
@@ -5,14 +6,14 @@ import { SvgIcon } from '@material-ui/core';
 const icons: Record<string, unknown> = {};
 
 function importAll(r: any) {
-  r.keys().forEach((key: string) => {
-    return (icons[key.replace('./', '')] = r(key));
-  });
+  for (const key of r.keys()) {
+    icons[key.replace('./', '')] = r(key);
+    // eslint-disable-next-line no-continue
+    continue;
+  }
 }
 
 importAll(require.context('!@svgr/webpack!../../../public/icons', true, /\.svg$/));
-
-console.log(icons);
 
 export interface IconProps {
   /** Define fill color */
@@ -29,7 +30,9 @@ export interface IconProps {
 }
 
 const Icon: FC<IconProps> = props => {
+  // eslint-disable-next-line react/destructuring-assignment
   const defaultSize = props.group === 'thin' ? 40 : 24;
+  // eslint-disable-next-line react/destructuring-assignment
   const defaultFill = props.group === 'color' ? '' : 'gray';
   const {
     fill = defaultFill,
@@ -49,8 +52,6 @@ const Icon: FC<IconProps> = props => {
     if (!iconItem) iconItem = icons['close-circle.svg'] as { default: any };
     return iconItem.default;
   }, [group, name]);
-
-  console.log(IconElem);
 
   return <SvgIcon component={IconElem} height={height} width={width} fill={fill} viewBox={viewBox} {...restProps} />;
 };

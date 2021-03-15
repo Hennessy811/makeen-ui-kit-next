@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+// eslint-disable-next-line import/no-named-default
 import { default as MuiButton, ButtonProps as MuiButtonProps } from '@material-ui/core/Button';
 import { makeStyles, Theme } from '@material-ui/core';
 import { ButtonSize } from '../../themes/default/sizes';

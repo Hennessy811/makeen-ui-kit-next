@@ -1,11 +1,13 @@
+/* eslint-disable unicorn/prefer-array-some */
 /* eslint-disable react/jsx-no-undef */
 import { Box, Chip, FormControl, InputLabel, MenuItem, Select as MuiSelect, Typography, makeStyles, Theme } from '@material-ui/core';
 
-import { Check, Plus } from './Icons';
 import React, { FC } from 'react';
+import { Check, Plus } from './Icons';
 
 export interface SelectProps {
   value: string[];
+  // eslint-disable-next-line no-unused-vars
   onChange: (value: string[]) => void;
   options: { title: string; value: string; subtitle: string }[];
 }
@@ -54,8 +56,8 @@ const Select: FC<SelectProps> = ({ value, onChange, options }) => {
         disableUnderline
         renderValue={selected => (
           <div className={classes.chips}>
-            {(selected as string[]).map(value => (
-              <Chip color="primary" size="small" key={value} label={options.find(i => i.value === value)?.title} className={classes.chip} />
+            {(selected as string[]).map(v => (
+              <Chip color="primary" size="small" key={v} label={options.find(i => i.value === v)?.title} className={classes.chip} />
             ))}
           </div>
         )}

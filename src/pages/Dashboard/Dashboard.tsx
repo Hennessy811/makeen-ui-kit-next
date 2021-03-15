@@ -1,5 +1,5 @@
-import { Box, Card, Divider, Typography } from "@material-ui/core";
-import React from "react";
+import { Box, Card, Divider, Typography } from '@material-ui/core';
+import React from 'react';
 
 const Dashboard = () => {
   return (

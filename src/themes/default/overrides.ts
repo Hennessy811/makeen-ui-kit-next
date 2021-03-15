@@ -1,22 +1,23 @@
-import { Overrides } from "@material-ui/core/styles/overrides";
+// eslint-disable-next-line import/no-unresolved
+import { Overrides } from '@material-ui/core/styles/overrides';
 
 const overrides: Overrides = {
   MuiButton: {
     root: {
-      borderRadius: "4px",
-      cursor: "pointer",
-      fontSize: "12px",
-      margin: "5px",
+      borderRadius: '4px',
+      cursor: 'pointer',
+      fontSize: '12px',
+      margin: '5px',
     },
   },
   MuiDialog: {
     container: {
-      overflowY: "scroll",
+      overflowY: 'scroll',
     },
   },
   MuiFormControl: {
     root: {
-      width: "100%",
+      width: '100%',
     },
   },
   MuiSlider: {
@@ -33,7 +34,7 @@ const overrides: Overrides = {
   MuiInputLabel: {
     outlined: {
       fontSize: 15,
-      transform: "translate(14px, 16px) scale(1)",
+      transform: 'translate(14px, 16px) scale(1)',
     },
   },
   MuiOutlinedInput: {
@@ -42,17 +43,17 @@ const overrides: Overrides = {
     },
     input: {
       fontSize: 15,
-      lineHeight: "20px",
-      padding: "14px 16px",
+      lineHeight: '20px',
+      padding: '14px 16px',
     },
     notchedOutline: {
-      borderColor: "#e4e9f2",
+      borderColor: '#e4e9f2',
       top: -2,
     },
   },
   MuiTabs: {
     indicator: {
-      backgroundColor: "transparent",
+      backgroundColor: 'transparent',
     },
   },
 };

@@ -1,26 +1,26 @@
-import { createMuiTheme, Theme } from "@material-ui/core/styles";
+import { createMuiTheme, Theme } from '@material-ui/core/styles';
 
-import { ExtendedTheme, CustomTypography } from "../theme.interface";
-import palette from "./palette";
-import typography from "./typography";
-import overrides from "./overrides";
+// eslint-disable-next-line import/no-unresolved
+import { ComponentsProps } from '@material-ui/core/styles/props';
+import palette from './palette';
+import typography from './typography';
+import overrides from './overrides';
 
-import { sizes } from "./sizes";
-import { ComponentsProps } from "@material-ui/core/styles/props";
+import { sizes } from './sizes';
 
 const props: ComponentsProps = {
   MuiButton: {
     disableElevation: true,
   },
   MuiCheckbox: {
-    color: "default",
-    size: "small",
+    color: 'default',
+    size: 'small',
   },
   MuiRadio: {
-    color: "primary",
+    color: 'primary',
   },
   MuiSwitch: {
-    color: "primary",
+    color: 'primary',
   },
   MuiTab: {
     disableRipple: true,

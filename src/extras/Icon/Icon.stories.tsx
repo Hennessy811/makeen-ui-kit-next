@@ -1,6 +1,8 @@
 import React from 'react';
 
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { Meta, Story } from '@storybook/react';
+// eslint-disable-next-line import/no-named-default
 import { default as Icon, IconProps } from './Icon';
 
 export default {

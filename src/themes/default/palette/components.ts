@@ -1,5 +1,6 @@
-import { createMuiTheme } from "@material-ui/core";
-import * as colors from "../../colors";
+import { createMuiTheme } from '@material-ui/core';
+import * as colors from '../../colors';
+
 const { palette: defaultPalette } = createMuiTheme();
 
 const componentsPalette = {
@@ -15,19 +16,19 @@ const componentsPalette = {
     main: colors.basic[300],
   },
   drawer: {
-    background: "#232f3e",
-    foreground: "#192435",
+    background: '#232f3e',
+    foreground: '#192435',
     titleColor: colors.basic[100],
-    titleFontSize: "24px",
+    titleFontSize: '24px',
   },
   sidebar: {
-    main: "#7d807e",
+    main: '#7d807e',
     active: colors.basic[100],
-    background: "#0e1928",
-    contentBackground: "#101c2c",
+    background: '#0e1928',
+    contentBackground: '#101c2c',
   },
   logo: {
-    dark: "#417dc8",
+    dark: '#417dc8',
     main: colors.basic[100],
   },
   BannerColors: {
@@ -223,9 +224,9 @@ const componentsPalette = {
   },
   disabledButtonColors: {
     color: colors.basic[600],
-    backgroundColor: "rgba(143, 155, 179, .16)",
-    backgroundColorOnHover: "rgba(143, 155, 179, .16)",
-    backgroundColorOnPressed: "rgba(143, 155, 179, .16)",
+    backgroundColor: 'rgba(143, 155, 179, .16)',
+    backgroundColorOnHover: 'rgba(143, 155, 179, .16)',
+    backgroundColorOnPressed: 'rgba(143, 155, 179, .16)',
     labelOpacity: 0.48,
   },
   inputColors: {

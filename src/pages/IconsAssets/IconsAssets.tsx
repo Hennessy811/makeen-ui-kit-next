@@ -1,65 +1,54 @@
-import React, { useMemo, useState } from "react";
+import React, { useMemo, useState } from 'react';
 
-import {
-  Box,
-  Card,
-  FormControl,
-  FormControlLabel,
-  FormLabel,
-  Radio,
-  RadioGroup,
-  TextField,
-  Typography,
-} from "@material-ui/core";
+import { Box, Card, FormControl, FormControlLabel, FormLabel, Radio, RadioGroup, TextField, Typography } from '@material-ui/core';
 
-import { last } from "lodash";
+import { last } from 'lodash';
 
-import Icon from "../../extras/Icon";
+import Icon from '../../extras/Icon';
 
 interface IconDef {
   icon: string;
   fullname: string;
-  group: "" | "color" | "filled" | "linear" | "thin";
+  group: '' | 'color' | 'filled' | 'linear' | 'thin';
 }
 
 let icons: IconDef[] = [];
 
 function importAll(r: any) {
   const tempIcons: any = {};
-  r.keys().forEach((key: any) => {
-    return (tempIcons[key.replace("./", "")] = r(key));
-  });
+  // eslint-disable-next-line no-restricted-syntax
+  for (const key of r.keys()) {
+    tempIcons[key.replace('./', '')] = r(key);
+    // eslint-disable-next-line no-continue
+    continue;
+  }
   icons = Object.keys(tempIcons).map((i: string) => {
-    const splt = i.split("/");
+    const splt = i.split('/');
     if (splt.length > 1) {
       return {
         fullname: i,
-        icon: last(splt)!.replace(".svg", ""),
-        group: splt[0] as "" | "color" | "filled" | "linear" | "thin",
+        icon: last(splt)!.replace('.svg', ''),
+        group: splt[0] as '' | 'color' | 'filled' | 'linear' | 'thin',
       };
     }
-    return { group: "", fullname: i, icon: i.replace(".svg", "") };
+    return { group: '', fullname: i, icon: i.replace('.svg', '') };
   });
 }
 
-importAll(
-  require.context("!@svgr/webpack!../../../public/icons", true, /\.svg$/)
-);
+importAll(require.context('!@svgr/webpack!../../../public/icons', true, /\.svg$/));
 
 const IconsAssets = () => {
-  const [iconFilter, setIconFilter] = useState("");
-  const [iconGroup, setIconGroup] = useState("all");
+  const [iconFilter, setIconFilter] = useState('');
+  const [iconGroup, setIconGroup] = useState('all');
 
   const memoizedIcons = useMemo(
     () =>
       icons
         .filter((i: IconDef) => {
-          if (iconGroup === "all") return true;
-          else return i.group === iconGroup;
+          if (iconGroup === 'all') return true;
+          return i.group === iconGroup;
         })
-        .filter((i: IconDef) =>
-          i.fullname.toLowerCase().includes(iconFilter.toLowerCase())
-        ),
+        .filter((i: IconDef) => i.fullname.toLowerCase().includes(iconFilter.toLowerCase())),
     [iconFilter, iconGroup]
   );
 
@@ -76,36 +65,14 @@ const IconsAssets = () => {
                 aria-label="gender"
                 name="gender1"
                 value={iconGroup}
-                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                  setIconGroup(e.target.value)
-                }
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) => setIconGroup(e.target.value)}
               >
                 <FormControlLabel value="all" control={<Radio />} label="All" />
-                <FormControlLabel
-                  value=""
-                  control={<Radio />}
-                  label="No group"
-                />
-                <FormControlLabel
-                  value="filled"
-                  control={<Radio />}
-                  label="Filled"
-                />
-                <FormControlLabel
-                  value="color"
-                  control={<Radio />}
-                  label="Color"
-                />
-                <FormControlLabel
-                  value="linear"
-                  control={<Radio />}
-                  label="Linear"
-                />
-                <FormControlLabel
-                  value="thin"
-                  control={<Radio />}
-                  label="Thin"
-                />
+                <FormControlLabel value="" control={<Radio />} label="No group" />
+                <FormControlLabel value="filled" control={<Radio />} label="Filled" />
+                <FormControlLabel value="color" control={<Radio />} label="Color" />
+                <FormControlLabel value="linear" control={<Radio />} label="Linear" />
+                <FormControlLabel value="thin" control={<Radio />} label="Thin" />
               </RadioGroup>
             </FormControl>
           </Box>
@@ -114,9 +81,7 @@ const IconsAssets = () => {
               <TextField
                 fullWidth
                 value={iconFilter}
-                onChange={(
-                  e: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>
-                ) => setIconFilter(e.target.value)}
+                onChange={(e: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>) => setIconFilter(e.target.value)}
                 variant="outlined"
                 placeholder="Search icons"
               />
@@ -124,7 +89,7 @@ const IconsAssets = () => {
             <Box display="flex" alignItems="center" flexWrap="wrap">
               {memoizedIcons.map((i: IconDef) => (
                 <Box
-                  key={`${i.icon}/${i.group || ""}`}
+                  key={`${i.icon}/${i.group || ''}`}
                   display="flex"
                   flexDirection="column"
                   alignItems="center"

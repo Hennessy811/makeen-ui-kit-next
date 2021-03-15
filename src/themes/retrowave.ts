@@ -3,7 +3,6 @@ import { createMuiTheme } from '@material-ui/core/styles';
 import lightBlue from '@material-ui/core/colors/lightBlue';
 import indigo from '@material-ui/core/colors/indigo';
 import purple from '@material-ui/core/colors/purple';
-import amber from '@material-ui/core/colors/amber';
 import deepOrange from '@material-ui/core/colors/deepOrange';
 import palette from './default/palette';
 import { sizes } from './default/sizes';
