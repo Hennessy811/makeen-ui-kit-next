@@ -1,18 +1,19 @@
-import React from "react";
-import CssBaseline from "@material-ui/core/CssBaseline";
-import { ThemeProvider } from "styled-components";
-import { MuiThemeProvider } from "@material-ui/core/styles";
-import { StylesProvider } from "@material-ui/styles";
-import { Box, Card } from "@material-ui/core";
+import React from 'react';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import { ThemeProvider } from 'styled-components';
+import { MuiThemeProvider } from '@material-ui/core/styles';
+import { StylesProvider } from '@material-ui/styles';
+import { Box, Card } from '@material-ui/core';
 
-import Dark from "themes/dark";
-import Retrowave from "themes/retrowave";
-import Default from "themes/default";
+import Dark from 'themes/dark';
+import Retrowave from 'themes/retrowave';
+import RemarDark from 'themes/remar-dark';
+import Default from 'themes/default';
 
-const themes = { Default, Dark, Retrowave };
+const themes = { Default, Dark, Retrowave, RemarDark };
 
 export const parameters = {
-  actions: { argTypesRegex: "^on[A-Z].*" },
+  actions: { argTypesRegex: '^on[A-Z].*' },
 };
 
 export const decorators = [
@@ -35,14 +36,15 @@ export const decorators = [
 
 export const globalTypes = {
   theme: {
-    name: "theme",
-    defaultValue: "Default",
+    name: 'theme',
+    defaultValue: 'Default',
     toolbar: {
-      icon: "circlehollow",
+      icon: 'circlehollow',
       items: [
-        { value: "Default", title: "🌆 Default" },
-        { value: "Dark", title: "🌃 Dark" },
-        { value: "Retrowave", title: "👾 Retrowave" },
+        { value: 'Default', title: '🌆 Default' },
+        { value: 'Dark', title: '🌃 Dark' },
+        { value: 'RemarDark', title: '🌃 🚑 Remar Dark' },
+        { value: 'Retrowave', title: '👾 Retrowave' },
       ],
     },
   },
