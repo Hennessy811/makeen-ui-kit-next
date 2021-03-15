@@ -1,14 +1,6 @@
-import { Theme } from "@material-ui/core";
-import {
-  CommonColors,
-  Palette,
-  PaletteColor,
-  PaletteColorOptions,
-} from "@material-ui/core/styles/createPalette";
-import {
-  TypographyOptions,
-  TypographyStyleOptions,
-} from "@material-ui/core/styles/createTypography";
+import { Theme } from '@material-ui/core';
+import { CommonColors, Palette, PaletteColor, PaletteColorOptions } from '@material-ui/core/styles/createPalette';
+import { TypographyOptions, TypographyStyleOptions } from '@material-ui/core/styles/createTypography';
 
 type ICustomPaletteColorOptions =
   | {
@@ -312,9 +304,10 @@ export interface IExtendedPaletteOptions extends Palette {
     borderColor: string;
   };
   formFooterTextColor: string;
+  [name: string]: any;
 }
 
-declare module "@material-ui/core/styles/createMuiTheme" {
+declare module '@material-ui/core/styles/createMuiTheme' {
   interface Theme {
     extendedPalette: IExtendedPaletteOptions;
     sizes: ISizes;

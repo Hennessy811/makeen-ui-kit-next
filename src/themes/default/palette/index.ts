@@ -1,12 +1,14 @@
-import { createMuiTheme } from "@material-ui/core";
-import { IExtendedPaletteOptions } from "../../theme.interface";
-import * as colors from "../../colors";
-import components from "./components";
-import { generalPalette } from "./general";
+import { createMuiTheme } from '@material-ui/core';
+import { IExtendedPaletteOptions } from '../../theme.interface';
+import * as colors from '../../colors';
+import components from './components';
+import { generalPalette } from './general';
 
 const { palette: defaultPalette } = createMuiTheme();
 
-const colorPalette: IExtendedPaletteOptions = {
+// TODO: FIXME: Remove ignore and resolve types mismatch here
+// @ts-ignore
+const colorPalette: Partial<IExtendedPaletteOptions> = {
   ...defaultPalette,
   colors,
   ...generalPalette,
@@ -46,7 +48,7 @@ const colorPalette: IExtendedPaletteOptions = {
     textColor: colors.basic[100],
   },
   vyooStartTemplate: {
-    headerBackgroundColor: "rgba(255, 255, 255, 0.94)",
+    headerBackgroundColor: 'rgba(255, 255, 255, 0.94)',
     contentBackgroundColor: colors.basic[200],
   },
   contentBox: {
